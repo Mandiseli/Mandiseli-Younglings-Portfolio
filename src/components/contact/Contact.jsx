@@ -45,7 +45,7 @@ const Contact = () => {
                         </div>
 
                         <div className="contact_card">
-                            <i className="bx bx-whatsapp contact_card-icon"></i>
+                            <i className="bx bxl-whatsapp-square contact_card-icon"></i>
 
                             <h3 className="contact_card-title">Whatsapp</h3>
                             <span className="contact_card-data">0631095231</span>
