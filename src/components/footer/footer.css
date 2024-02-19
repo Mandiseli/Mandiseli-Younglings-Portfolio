@@ -1,0 +1,47 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--title-color);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+    color: white;
+}
+
+ 
+/* BREAKPOINTS */
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    } 
+
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+
+    .services{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+
+}
