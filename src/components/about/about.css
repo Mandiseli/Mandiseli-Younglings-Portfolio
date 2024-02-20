@@ -1,103 +1,108 @@
+/* Styles for the about container */
 .about_container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    column-gap: 4rem;
+    grid-template-columns: repeat(2, 1fr); /* Set grid columns to 2 with equal width */
+    align-items: center; /* Center align items vertically */
+    column-gap: 4rem; /* Spacing between columns */
 }
 
+/* Styles for the about image */
 .about_img {
-    width: 350px;
-    border-radius: 1.5rem;
-    justify-self: center;
+    width: 350px; /* Image width */
+    border-radius: 1.5rem; /* Border radius */
+    justify-self: center; /* Center align image horizontally */
 }
 
+/* Styles for the about information container */
 .about_info {
-    grid-template-columns: repeat(3, 140px);
-    gap: 0.5rem;
-    margin-bottom: var(--mb-2);
+    grid-template-columns: repeat(3, 140px); /* Set grid columns with fixed width */
+    gap: 0.5rem; /* Spacing between items */
+    margin-bottom: var(--mb-2); /* Bottom margin using CSS variable */
 }
 
+/* Styles for each box in about information */
 .about_box {
-    background-color: grey;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.75rem;
-    text-align: center;
-    padding: 1rem 1.25rem;
+    background-color: grey; /* Background color */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border */
+    border-radius: 0.75rem; /* Border radius */
+    text-align: center; /* Center align text */
+    padding: 1rem 1.25rem; /* Padding */
 }
 
+/* Styles for the icons in about information */
 .about_icon {
-    font-size: 1.5rem;
-    color: var(--title-color);
-    margin-bottom: var(--mb-0-5);
+    font-size: 1.5rem; /* Icon size */
+    color: var(--title-color); /* Icon color */
+    margin-bottom: var(--mb-0-5); /* Bottom margin using CSS variable */
 }
 
+/* Styles for the titles in about information */
 .about_title {
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
-    color: white;
+    font-size: var(--small-font-size); /* Font size using CSS variable */
+    font-weight: var(--font-medium); /* Font weight using CSS variable */
+    color: white; /* Text color */
 }
 
+/* Styles for the subtitles in about information */
 .about_subtitle {
-    font-size: var(--tiny-font-size);
+    font-size: var(--tiny-font-size); /* Font size using CSS variable */
 }
- 
+
+/* Styles for the heading in about information */
 .about_head  {
-    font-size: 2rem;
-    Color: var(--title-color-dark)
+    font-size: 2rem; /* Font size */
+    Color: var(--title-color-dark); /* Text color */
 }
 
+/* Styles for the description in about information */
 .about_description {
-    padding: 0 4rem 0 0;
-    margin-bottom: var(--mb-2-5);
-
+    padding: 0 4rem 0 0; /* Padding */
+    margin-bottom: var(--mb-2-5); /* Bottom margin using CSS variable */
 }
 
-/*========================BREAKPOINTS=================*/
-/*For large devices*/
+/* Media queries for responsiveness */
+/* For large devices */
 @media screen and (max-width: 992px) { 
     .about_container {
-        grid-template-columns: 1fr;
-        row-gap: 2.5rem;
+        grid-template-columns: 1fr; /* Change to single column layout */
+        row-gap: 2.5rem; /* Spacing between rows */
     }
     
     .about_img {
-        width: 220px;
+        width: 220px; /* Adjust image width */
     }
 
     .about_box {
-        padding: 0.75rem 0.5rem;
+        padding: 0.75rem 0.5rem; /* Adjust padding */
     }
 
     .about_data {
-        text-align: center;
+        text-align: center; /* Center align text */
     }
 
     .about_info {
-        justify-content: center;
+        justify-content: center; /* Center align items */
     }
 
     .about_description {
-        padding: 0 5rem;
-        margin-bottom: 2rem;
+        padding: 0 5rem; /* Adjust padding */
+        margin-bottom: 2rem; /* Bottom margin */
     }
-  }
+}
   
-  
-  /*For medium devices*/
-  @media screen and (max-width: 576px) { 
+/* For medium devices */
+@media screen and (max-width: 576px) { 
     .about_info {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Adjust grid columns */
     } 
 
     .about_description {
-        padding: 0;
+        padding: 0; /* Remove padding */
     }
-  }
+}
   
-  
-  /*For small devices*/
-  @media screen and (max-width: 350px) {
+/* For small devices */
+@media screen and (max-width: 350px) {
     .about_info {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid columns */
     }
-  }
-  
+}

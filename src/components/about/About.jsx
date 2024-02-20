@@ -1,23 +1,30 @@
+// Import React library
 import React from "react";
-import AboutImg from "../../assets/home.jpg"
-import CV from "../../assets/myCV.pdf"
-import Info from "./Info";
+
+// Importing images and components
+import AboutImg from "../../assets/home.jpg"; // Importing image for about section
+import CV from "../../assets/myCV.pdf"; // Importing CV PDF
+import Info from "./Info"; // Importing additional information component
+
+// Importing CSS styles for the about section
 import "./about.css";
 
-
+// Functional component for the About section
 const About = () => {
     return (
-        <section className="about section" id="about">
+        <section className="about section" id="about"> {/* About section */}
+            {/* Title and subtitle for the section */}
             <h2 className="section_title">About Me</h2>
             <span className="section_subtitle">My Introduction</span>
 
-            <div className="about_container container grid">
-                <img src={AboutImg} alt="" className="about_img" />
+            <div className="about_container container grid"> {/* Container for about information */}
+                <img src={AboutImg} alt="" className="about_img" /> {/* Displaying about image */}
 
-                <div className="about_data">
-                    <h3 className="about_head">Junior Software Developer</h3>
-                    <Info/>
-
+                <div className="about_data"> {/* About data container */}
+                    <h3 className="about_head">Junior Software Developer</h3> {/* Job title */}
+                    <Info/> {/* Additional information component */}
+                    
+                    {/* Description about the developer */}
                     <p className="about_description">i am energetic, goal-driven National Diploma in Information Technology 
                     Graduate with a solid academic background specializing in Business 
                     Applications mainly Information Systems, Development Software, Business 
@@ -26,15 +33,14 @@ const About = () => {
                     graduate internship or entry level job in the field that aligns with my studies.
                     </p>
 
+                    {/* Download link for the CV */}
                     <a download="myCV.pdf" href={CV} className="button button--flex">Download CV</a>
-
-
                 </div>
 
             </div>
         </section>
-        
     )
 }
 
-export default About
+// Exporting the About component
+export default About;

@@ -1,76 +1,74 @@
+/* Styling for the container of services */
 .services-container {
-    grid-template-columns: repeat(3, 380px);
-    justify-content: center;
-    column-gap: 1.8rem;
-    align-items: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 380px); /* Three columns with a width of 380px each */
+    justify-content: center; /* Center aligning the content horizontally */
+    column-gap: 1.8rem; /* Spacing between columns */
+    align-items: center; /* Center aligning the items vertically */
+    flex-wrap: wrap; /* Allowing items to wrap to the next line if necessary */
 }
 
-.services_content{
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: grey;
-    padding: 1.5rem 2rem 2rem 2.5rem;
-    border-radius: 2rem;
-    text-align: center;
-
+/* Styling for the content of each service */
+.services_content {
+    position: relative; /* Setting the position to relative */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border styling */
+    background-color: grey; /* Background color */
+    padding: 1.5rem 2rem 2rem 2.5rem; /* Padding */
+    border-radius: 2rem; /* Border radius for rounded corners */
+    text-align: center; /* Center aligning the text */
 }
 
+/* Styling for when hovering over a service content */
 .services-container .services_content:hover {
-    background-color: var(--title-color-dark);
-    transform: scale(1.02);
-
+    background-color: var(--title-color-dark); /* Darkening the background color */
+    transform: scale(1.02); /* Slightly scaling up the content */
 }
 
-.services_icon{
-    display: block;
-    font-size: 2rem;
-    color: var(--title-color);
-    margin-bottom: var(--mb-1);
+/* Styling for the icon within the service content */
+.services_icon {
+    display: block; /* Setting the display to block */
+    font-size: 2rem; /* Font size of the icon */
+    color: var(--title-color); /* Color of the icon */
+    margin-bottom: var(--mb-1); /* Bottom margin */
 }
 
-.services_title{
-    font-size: var(--h3-font-size);
-    margin-bottom: var(--mb-1);
-    font-weight: var(--font-medium);
+/* Styling for the title of the service */
+.services_title {
+    font-size: var(--h3-font-size); /* Font size */
+    margin-bottom: var(--mb-1); /* Bottom margin */
+    font-weight: var(--font-medium); /* Font weight */
 }
 
-/*========================BREAKPOINTS=================*/
-/*For large devices*/
+/* Media queries for responsiveness */
+
+/* For large devices */
 @media screen and (max-width: 992px) { 
     .services-container {
-        grid-template-columns: repeat(3, 218px);
+        grid-template-columns: repeat(3, 218px); /* Three columns with a width of 218px each */
     }
-  }
-  
-  /*For medium devices*/
-  @media screen and (max-width: 768px) { 
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) { 
     .services-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
     }
 
     .services_content {
-        padding: 3.5rem 0.5 rem 1.25rem 1.5rem;
+        padding: 3.5rem 0.5rem 1.25rem 1.5rem; /* Adjusted padding */
     }
 
     .services_icon {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjusted font size */
     }
-  }
-  
-  @media screen and (max-width: 576px) {
-    
-  }
-  
-  /*For small devices*/
-  @media screen and (max-width: 350px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
     .services-container {
-        grid-template-columns: max-content;
+        grid-template-columns: max-content; /* Single column with maximum content width */
     }  
 
     .services_content {
-        padding-right: 6rem;
+        padding-right: 6rem; /* Adjusted padding */
     }
-  }
-  
-  
+}

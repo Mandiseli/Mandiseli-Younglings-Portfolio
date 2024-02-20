@@ -1,47 +1,54 @@
-.footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: var(--title-color);
+/* Styles for the footer */
+.footer {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space evenly between items */
+    align-items: center; /* Center align items vertically */
+    flex-wrap: wrap; /* Wrap items if necessary */
+    padding: 2rem 9%; /* Padding */
+    background: var(--title-color); /* Background color */
 }
 
-.footer-text p{
-    font-size: 1.6rem;
-    color: white;
+/* Styles for text within the footer */
+.footer-text p {
+    font-size: 1.6rem; /* Font size */
+    color: white; /* Text color */
 }
 
- 
-/* BREAKPOINTS */
-@media (max-width: 1200px){
-    html{
-        font-size: 55%;
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%; /* Adjust font size for smaller screens */
     }
 }
 
-@media (max-width: 991px){
-    .header{
-        padding: 2rem 3%;
+@media (max-width: 991px) {
+    /* Styles for header at smaller screen sizes */
+    .header {
+        padding: 2rem 3%; /* Adjust padding */
     }
 
-    section{
-        padding: 10rem 3% 2rem;
+    /* Styles for sections at smaller screen sizes */
+    section {
+        padding: 10rem 3% 2rem; /* Adjust padding */
     } 
 
-    .portfolio{
-        padding-bottom: 7rem;
+    /* Styles for portfolio section at smaller screen sizes */
+    .portfolio {
+        padding-bottom: 7rem; /* Adjust padding */
     }
 
-    .services{
-        padding-bottom: 7rem;
-    }
-    .contact{
-        min-height: auto;
+    /* Styles for services section at smaller screen sizes */
+    .services {
+        padding-bottom: 7rem; /* Adjust padding */
     }
 
-    .footer{
-        padding: 2rem 3%;
+    /* Styles for contact section at smaller screen sizes */
+    .contact {
+        min-height: auto; /* Set minimum height to auto */
     }
 
+    /* Styles for footer at smaller screen sizes */
+    .footer {
+        padding: 2rem 3%; /* Adjust padding */
+    }
 }

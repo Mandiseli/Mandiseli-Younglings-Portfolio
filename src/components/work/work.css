@@ -48,7 +48,7 @@
 }
 
 .work_button {
-    color: var(--main-color);
+    color: var(--title-color-dark);
     font-size: var(--small-font-size);
     display: flex;
     align-items: center;

@@ -1,144 +1,165 @@
+/* Styles for the contact container */
 .contact_container {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, max-content); /* Set grid columns to 2 with max-content width */
+    justify-content: center; /* Center content horizontally */
+    column-gap: 6rem; /* Spacing between columns */
+    padding-bottom: 3rem; /* Bottom padding */
+}
+
+.recaptcha {
     justify-content: center;
-    column-gap: 6rem;
-    padding-bottom: 3rem;
+    padding: 1rem 1rem;
 }
 
+/* Styles for the contact title */
 .contact_title {
-    text-align: center;
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    margin-bottom: var(--mb-1-5);
+    text-align: center; /* Center align text */
+    font-size: var(--h3-font-size); /* Font size using CSS variable */
+    font-weight: var(--font-medium); /* Font weight using CSS variable */
+    margin-bottom: var(--mb-1-5); /* Bottom margin using CSS variable */
 }
 
+/* Styles for the contact information container */
 .contact_info {
-    display: grid;
-    row-gap: 1rem;
-    grid-template-columns: 300px;
+    display: grid; /* Display as grid */
+    row-gap: 1rem; /* Spacing between rows */
+    grid-template-columns: 300px; /* Set column width */
 }
 
+/* Styles for each contact card */
 .contact_card {
-    background-color: grey;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    border-radius: 0.75rem;
-    text-align: center;
+    background-color: grey; /* Background color */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border */
+    padding: 1rem; /* Padding */
+    border-radius: 0.75rem; /* Border radius */
+    text-align: center; /* Center align text */
 }
 
+/* Styles for the contact card icon */
 .contact_card-icon {
-    font-size: 2rem;
-    color: var(--title-color);
-    margin-bottom: var(--mb-0-25);
+    font-size: 2rem; /* Icon size */
+    color: var(--title-color); /* Icon color */
+    margin-bottom: var(--mb-0-25); /* Bottom margin using CSS variable */
 }
 
+/* Styles for contact card title and data */
 .contact_card-title,
 .contact_card-data {
-    font-size: var(--small-font-size);
+    font-size: var(--small-font-size); /* Font size using CSS variable */
 }
 
+/* Styles for contact card title */
 .contact_card-title {
-    font-weight: var(--font-medium);
+    font-weight: var(--font-medium); /* Font weight using CSS variable */
 }
 
+/* Styles for contact card data */
 .contact_card-data {
-    display: block;
-    margin-bottom: var(--mb-0-75);
+    display: block; /* Display as block */
+    margin-bottom: var(--mb-0-75); /* Bottom margin using CSS variable */
 }
 
+/* Styles for contact button */
 .contact_button {
-    color: var(--title-color-dark);
-    font-size: var(--small-font-size);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0.25rem;
+    color: var(--title-color-dark); /* Text color */
+    font-size: var(--small-font-size); /* Font size using CSS variable */
+    display: inline-flex; /* Display as inline-flex */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center align content horizontally */
+    column-gap: 0.25rem; /* Spacing between icon and text */
 }
 
+/* Styles for contact button icon */
 .contact_button-icon {
-    font-size: 1rem;
-    transition: 0.3s;
+    font-size: 1rem; /* Icon size */
+    transition: 0.3s; /* Transition effect */
 }
 
+/* Hover styles for contact button icon */
 .contact_button:hover .contact_button-icon {
-    transform: translate(00.25rem);
+    transform: translate(0.25rem); /* Move icon slightly to the right on hover */
 }
 
+/* Styles for contact form */
 .contact_form {
-    width: 360px;
+    width: 360px; /* Form width */
 }
 
+/* Styles for contact form div */
 .contact_form-div {
-    position: relative;
-    margin-bottom: 1.25rem;
-    height: 4rem;
+    position: relative; /* Set position relative */
+    margin-bottom: 1.25rem; /* Bottom margin */
+    height: 4rem; /* Height */
 }
 
+/* Styles for contact form input */
 .contact_form-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solidrgba(0, 0, 0, 0.3);
-    background: none;
-    color: var(--text-color);
-    outline: none;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    z-index: 1;
+    position: absolute; /* Set position absolute */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Width */
+    height: 100%; /* Height */
+    border: 2px solid rgba(0, 0, 0, 0.3); /* Border */
+    background: none; /* Transparent background */
+    color: var(--text-color); /* Text color */
+    outline: none; /* Remove outline */
+    border-radius: 0.75rem; /* Border radius */
+    padding: 1.5rem; /* Padding */
+    z-index: 1; /* Set z-index */
 }
 
+/* Styles for contact form tag */
 .contact_form-tag {
-    position: absolute;
-    top: -0.75rem;
-    left: 1.25rem;
-    font-size: var(--smaller-font-size);
-    padding: 0.25rem;
-    background-color: var(--body-color);
-    z-index: 10;
+    position: absolute; /* Set position absolute */
+    top: -0.75rem; /* Align above input */
+    left: 1.25rem; /* Align to the left */
+    font-size: var(--smaller-font-size); /* Font size using CSS variable */
+    padding: 0.25rem; /* Padding */
+    background-color: var(--body-color); /* Background color */
+    z-index: 10; /* Set z-index */
 }
 
+/* Styles for contact form area */
 .contact_form-area {
-    height: 11rem;
+    height: 11rem; /* Set height */
 }
 
+/* Styles for contact form textarea */
 .contact_form-area textarea {
-    resize: none;
+    resize: none; /* Disable resizing */
 }
 
-/*========================BREAKPOINTS=================*/
-/*For large devices*/
+/* Media queries for responsiveness */
+/* For large devices */
 @media screen and (max-width: 992px) {
-   .contact_container {
-    column-gap: 3rem;
-   } 
+    .contact_container {
+        column-gap: 3rem; /* Adjust column gap */
+    }
 }
 
-  /*For medium devices*/
-  @media screen and (max-width: 768px) {
-   .contact_container {
-        grid-template-columns: 1fr;
-        row-gap: 3rem;
-    } 
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .contact_container {
+        grid-template-columns: 1fr; /* Change to single column layout */
+        row-gap: 3rem; /* Adjust row gap */
+    }
 
     .contact_info {
-        justify-content: center;
+        justify-content: center; /* Center align contact info */
     }
 
     .contact_form {
-        margin: 0 auto;
+        margin: 0 auto; /* Center align contact form */
     }
-  }
-  
-  /*For small devices*/
-  @media screen and (max-width: 350px) {
-    .contact_info {
-        grid-template-columns: 1fr;
-    } 
-    .contact_form {
-        width: 100%;
-    }
-  }
-  
+}
 
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .contact_info {
+        grid-template-columns: 1fr; /* Change to single column layout */
+    }
+
+    .contact_form {
+        width: 100%; /* Set form width to full */
+    }
+}
