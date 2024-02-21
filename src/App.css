@@ -87,11 +87,10 @@ textarea {
   font-size: var(--normal-font-size);
 }
 
-/* body {
-  
-   background-color: var(--body-color);
+ body {
+   background-color: #EFE7BC; 
    color: var(--text-color);
-} */
+} 
 
 h1, h2, h3 {
   color: black;
