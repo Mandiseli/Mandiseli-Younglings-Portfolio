@@ -25,8 +25,8 @@ const About = () => {
                     <Info/> {/* Additional information component */}
                     
                     {/* Description about the developer */}
-                    <p className="about_description">i am energetic, goal-driven National Diploma in Information Technology 
-                    Graduate with a solid academic background specializing in Business 
+                    <p className="about_description">Energetic & goal-driven, I am a graduate with National Diploma in Information Technology 
+                    equipped with a solid academic background specializing in Business 
                     Applications mainly Information Systems, Development Software, Business 
                     Analysis and Technical support. My focus is on building my career in Tech space 
                     and learning as much as I can. I am seeking for vacant position which can be a 

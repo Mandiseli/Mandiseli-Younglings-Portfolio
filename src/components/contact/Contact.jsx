@@ -1,5 +1,4 @@
-// Importing necessary libraries and components
-import React, { useRef, useEffect} from 'react'; // Importing React, useRef, and useEffect
+import React, { useRef, useEffect } from 'react'; // Importing React, useRef, and useEffect
 import emailjs from '@emailjs/browser'; // Importing emailjs library for sending emails
 import Aos from 'aos'; // Importing AOS library for animations
 import ReCAPTCHA from "react-google-recaptcha"; // Importing ReCAPTCHA component for captcha functionality
@@ -9,21 +8,48 @@ import "./contact.css";
 
 // Functional component for the Contact section
 const Contact = () => {
-    // Callback function for ReCAPTCHA onChange event
-    const onChange = () => {}
     
     // Creating a reference to the form element
     const form = useRef();
 
+    // Callback function for ReCAPTCHA onChange event
+    const onChange = () => {};
+
     // Function to send email
     const sendEmail = (e) => {
         e.preventDefault(); // Preventing default form submission behavior
+
+         // Validate form fields
+    const name = form.current.name.value.trim();
+    const email = form.current.email.value.trim();
+    const message = form.current.message.value.trim();
+
+    if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+      // Check if ReCAPTCHA is checked
+      const recaptchaToken = form.current['g-recaptcha-response'].value;
+      if (!recaptchaToken) {
+          alert('Please complete the ReCAPTCHA.');
+          return;
+      }
 
         // Sending form data using emailjs library
         emailjs
             .sendForm('service_r229kk7', 'template_duopm39', form.current, {
                 publicKey: 'GO40VW9Lgnu9z7UdP', // Public key for emailjs
             })
+
+            .then(() => {
+                alert('Your message has been sent successfully!');
+                form.current.reset(); // Resetting the form after successful submission
+            })
+            .catch((error) => {
+                alert('An error occurred while sending your message. Please try again later.');
+                console.error('EmailJS Error:', error);
+            });
         e.target.reset(); // Resetting the form after submission
     };
 
@@ -85,7 +111,10 @@ const Contact = () => {
                                 type="text" 
                                 name="name" 
                                 className="contact_form-input"
-                                placeholder="Full-Name" /> {/* Input field for name */}
+                                placeholder="Full-Name" 
+                                // value={name}
+                                // onChange={(e) => setName(e.target.value)}
+                                /> {/* Input field for name */}
                         </div>
 
                         {/* Input field for email */}
@@ -95,7 +124,10 @@ const Contact = () => {
                                 type="email" 
                                 name="email" 
                                 className="contact_form-input"
-                                placeholder="Email-Address" /> {/* Input field for email */}
+                                placeholder="Email-Address"
+                                // value={email}
+                                // onChange={(e) => setEmail(e.target.value)} 
+                                /> {/* Input field for email */}
                         </div>
 
                         {/* Textarea field for message */}
@@ -106,15 +138,16 @@ const Contact = () => {
                                 cols="30" 
                                 rows="10"
                                 className="contact_form-input"
-                                placeholder="Write your message"></textarea> {/* Textarea field for message */}
+                                placeholder="Write your message"
+                                // value={message}
+                                // onChange={(e) => setMessage(e.target.value)}
+                                ></textarea> {/* Textarea field for message */}
                         </div>
 
                         <div className='recaptcha'>
                              {/* ReCAPTCHA component */}
-                        <ReCAPTCHA sitekey="6Ldte3kpAAAAAFHcLTc8PYX7BxNXTjVKwPCxOsLc" onChange={onChange}/> {/* ReCAPTCHA for captcha functionality */}
+                            <ReCAPTCHA sitekey="6Ldte3kpAAAAAFHcLTc8PYX7BxNXTjVKwPCxOsLc" onChange={onChange}/> {/* ReCAPTCHA for captcha functionality */}
                         </div>
-
-                       
 
                         {/* Button to send message */}
                         <button className="button button-flex">Send Message</button> {/* Button to submit form */}
@@ -122,7 +155,7 @@ const Contact = () => {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Contact; // Exporting the Contact component
