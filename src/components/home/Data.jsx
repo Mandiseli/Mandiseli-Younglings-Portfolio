@@ -17,7 +17,11 @@ const Data = () => {
             <h3 className="home_subtitle">Junior Software Developer</h3>
             {/* Description */}
             <p className="home_description">
-                This is my official portfolio website to show all my details and work experience.
+            Welcome to my official portfolio website. I am committed to pioneering
+            innovative solutions and pushing the limits of technology. 
+            With a solid background in Information Technology and specialized expertise in Business Applications, 
+            I offer a distinctive combination of technical prowess and inventive
+            problem-solving skills to each project I engage in.
             </p>
             {/* Contact button */}
             <a href="#contact" className="button button--flex">Contact Me</a>

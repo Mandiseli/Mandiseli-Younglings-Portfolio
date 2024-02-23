@@ -48,7 +48,7 @@
 }
 
 .work_button {
-    color: var(--title-color-dark);
+    color: white;
     font-size: var(--small-font-size);
     display: flex;
     align-items: center;
@@ -61,6 +61,7 @@
 }
 
 .work_button:hover .work_button-icon {
+    color: var(--title-color-dark);
     transform: translateX(0.25rem);
 }
 

@@ -11,6 +11,11 @@
     border-radius: 1.25rem;
 }
 
+.skills_container .skills_content:hover {
+    background-color: var(--title-color-dark); /* Darkening the background color */
+    transform: scale(1.02); /* Slightly scaling up the content */
+}
+
 .skills_title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
@@ -37,7 +42,7 @@
 
 .skills .bx-badge-check {
     font-size: 1rem;
-    color: red;
+    color: white;
 }
 
 .skills_name {
@@ -48,7 +53,7 @@
 
 .skills_level {
     font-size: var(--tiny-font-size);
-    color: red;
+    color: white;
 
 }
 

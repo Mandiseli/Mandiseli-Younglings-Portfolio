@@ -61,7 +61,7 @@
 
 /* Styles for contact button */
 .contact_button {
-    color: var(--title-color-dark); /* Text color */
+    color: White; /* Text color */
     font-size: var(--small-font-size); /* Font size using CSS variable */
     display: inline-flex; /* Display as inline-flex */
     align-items: center; /* Align items vertically */
@@ -127,6 +127,27 @@
 /* Styles for contact form textarea */
 .contact_form-area textarea {
     resize: none; /* Disable resizing */
+}
+
+.field.error .contact_form-input{
+    border-color: #d93025;
+
+}
+
+.field .error-txt{
+    font-size: 14.5px;
+    color: #d93025;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+.field.error .error-txt{
+    display: block;
+}
+
+form .contact_form-area .error-txt{
+    margin-top: -10px;
 }
 
 /* Media queries for responsiveness */

@@ -20,7 +20,7 @@ const Info = () => {
                 {/* Icon for completed projects */}
                 <i class="bx bx-briefcase-alt about_icon"></i>
                 {/* Title for completed projects */}
-                <h3 className="about_title">completed</h3>
+                <h3 className="about_title">Completed</h3>
                 {/* Subtitle for completed projects */}
                 <span className="about_subtitle">5 + Projects</span>
             </div>

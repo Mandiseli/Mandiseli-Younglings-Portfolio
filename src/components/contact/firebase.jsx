@@ -1,17 +1,15 @@
-// import firebase from 'firebase';
+// import firebase from "firebase";
 
-// var firebaseApp = firebase.initializeApp({apiKey: "AIzaSyD_Zfzc9zmKePDjXGhO3u7VMDeNn6hSyLk",
-// authDomain: "contact-form-d40d0.firebaseapp.com",
-// projectId: "contact-form-d40d0",
-// storageBucket: "contact-form-d40d0.appspot.com",
-// messagingSenderId: "988760847438",
-// appId: "1:988760847438:web:d4db85818f0e53433ebf1f"
+// var firebaseApp = firebase.initializeApp({
+    
+//     apiKey: "AIzaSyCpmdh66R18LAWBwvsRnQPKs1MfeHK75qM",
+//     authDomain: "contact-form-716a1.firebaseapp.com",
+//     projectId: "contact-form-716a1",
+//     storageBucket: "contact-form-716a1.appspot.com",
+//     messagingSenderId: "187406485588",
+//     appId: "1:187406485588:web:11d390c6d828c8bf4705c1"
 // });
 
 // var db = firebaseApp.firestore();
 
-// export {db}
-
-
-
-  
+// export { db };

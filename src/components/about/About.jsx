@@ -2,7 +2,7 @@
 import React from "react";
 
 // Importing images and components
-import AboutImg from "../../assets/home.jpg"; // Importing image for about section
+import AboutImg from "../../assets/me.jpg"; // Importing image for about section
 import CV from "../../assets/myCV.pdf"; // Importing CV PDF
 import Info from "./Info"; // Importing additional information component
 
@@ -25,12 +25,13 @@ const About = () => {
                     <Info/> {/* Additional information component */}
                     
                     {/* Description about the developer */}
-                    <p className="about_description">Energetic & goal-driven, I am a graduate with National Diploma in Information Technology 
-                    equipped with a solid academic background specializing in Business 
-                    Applications mainly Information Systems, Development Software, Business 
-                    Analysis and Technical support. My focus is on building my career in Tech space 
-                    and learning as much as I can. I am seeking for vacant position which can be a 
-                    graduate internship or entry level job in the field that aligns with my studies.
+                    <p className="about_description">A highly motivated graduate with a National Diploma in Information Technology, 
+                    specializing in Business Applications, seeks opportunities in the tech industry. 
+                    Equipped with strong academic credentials and a passion for continuous learning, 
+                    I am eager to apply theoretical knowledge in practical settings, 
+                    embracing challenges and experiences to propel career growth. 
+                    Driven by a desire to make a significant impact, they are ready to embark on a journey of 
+                    professional development and discovery within the dynamic tech space.
                     </p>
 
                     {/* Download link for the CV */}

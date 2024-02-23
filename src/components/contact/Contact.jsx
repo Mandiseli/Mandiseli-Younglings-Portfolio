@@ -1,13 +1,22 @@
 import React, { useRef, useEffect } from 'react'; // Importing React, useRef, and useEffect
+import "./contact.css";
 import emailjs from '@emailjs/browser'; // Importing emailjs library for sending emails
 import Aos from 'aos'; // Importing AOS library for animations
 import ReCAPTCHA from "react-google-recaptcha"; // Importing ReCAPTCHA component for captcha functionality
+//import { db } from './Firebase';
+
+
 
 // Importing CSS styles for the contact section
 import "./contact.css";
 
 // Functional component for the Contact section
 const Contact = () => {
+    // const [name, setName] = useState("")
+    // const [email, setEmail] = useState("") 
+    // const [message, setMessage] = useState("")
+    
+    // const [loader, setLoader] = useState(false) 
     
     // Creating a reference to the form element
     const form = useRef();
@@ -18,6 +27,25 @@ const Contact = () => {
     // Function to send email
     const sendEmail = (e) => {
         e.preventDefault(); // Preventing default form submission behavior
+        //setLoader(true)
+
+        // db.collection('contacts').add({
+        //     name: name,
+        //     email:email,
+        //     message:message,
+        // })
+        // .then(() =>{
+        //     alert('message has been sent')
+        //     setLoader(false);
+        // })
+        // .catch(error =>{
+        //     alert(error.message)
+        //     setLoader(false)
+        // })
+
+        // setName('');
+        // setEmail('');
+        // setMessage('');
 
          // Validate form fields
     const name = form.current.name.value.trim();
@@ -105,7 +133,7 @@ const Contact = () => {
                     {/* Form for sending message */}
                     <form ref={form} onSubmit={sendEmail} className="contact_form"> {/* Form element */}
                         {/* Input field for name */}
-                        <div className="contact_form-div">
+                        <div className="contact_form-div field">
                             <label className="contact_form-tag">Name</label> {/* Label for name input */}
                             <input 
                                 type="text" 
@@ -115,23 +143,25 @@ const Contact = () => {
                                 // value={name}
                                 // onChange={(e) => setName(e.target.value)}
                                 /> {/* Input field for name */}
+                                <div className='error-txt'>Fullname can't be blank</div>
                         </div>
 
                         {/* Input field for email */}
-                        <div className="contact_form-div">
+                        <div className="contact_form-div field">
                             <label className="contact_form-tag">Mail</label> {/* Label for email input */}
                             <input 
                                 type="email" 
                                 name="email" 
                                 className="contact_form-input"
                                 placeholder="Email-Address"
-                                // value={email}
+                                //  value={email}
                                 // onChange={(e) => setEmail(e.target.value)} 
                                 /> {/* Input field for email */}
+                                <div className='error-txt'>email can't be blank</div>
                         </div>
 
                         {/* Textarea field for message */}
-                        <div className="contact_form-div contact_form-area">
+                        <div className="contact_form-div contact_form-area field">
                             <label className="contact_form-tag">Message</label> {/* Label for message textarea */}
                             <textarea 
                                 name="message" 
@@ -142,6 +172,7 @@ const Contact = () => {
                                 // value={message}
                                 // onChange={(e) => setMessage(e.target.value)}
                                 ></textarea> {/* Textarea field for message */}
+                                <div className='error-txt'>message can't be blank</div>
                         </div>
 
                         <div className='recaptcha'>
@@ -150,7 +181,7 @@ const Contact = () => {
                         </div>
 
                         {/* Button to send message */}
-                        <button className="button button-flex">Send Message</button> {/* Button to submit form */}
+                        <button className="button button-flex" >Send Message</button> {/* Button to submit form */}
                     </form>
                 </div>
             </div>
